@@ -1,0 +1,22 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+
+<h3>Login</h3>
+
+<form method="POST" action="welcome">
+    {% csrf_token %}
+    <p>
+    <label>Email:</label>
+    <div>{{ form.eemail }}</div>
+    <tr>
+    <input name="eemail" requeried value=" {{user.eemail}}"></tr><br>
+    <label>Password:</label>
+    <div>{{ form.epassword1 }}</div>
+    <tr>
+    <input name="epassword1" requeried value=" {{user.epassword1}}"></tr><br>
+        <a href="welcome"><button type="submit">login</button></a>
+    </p>
+
+</form>
+{% endblock%}
