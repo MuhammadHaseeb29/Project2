@@ -1,0 +1,37 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+
+
+<h3>Register</h3>
+
+<form method="POST" action="login">
+    {% csrf_token %}
+
+    <label>ID:</label>
+    <div>{{ form.eid }}</div>
+    <!-- <tr>
+    <input name="eid" requeried value=" {{user.eid}}"></tr><br> -->
+    
+    <label>Email:</label>
+    <div>{{ form.eemail }}</div>
+    <!-- <tr>
+    <input name="eemail" requeried value=" {{user.eemail}}"></tr><br> -->
+
+    <label>Password:</label>
+    <!-- <div>{{ form.epassword1 }}</div>
+    <tr>
+    <input name="epassword1" requeried value=" {{user.epassword1}}"></tr><br> -->
+
+    <label>Confirm Password:</label>
+    <div>{{ form.epassword2 }}</div>
+    <!-- <tr>
+    <input name="epassword2" requeried value=" {{user.epassword2}}"></tr><br> -->
+
+    <button type="submit">Register</button></a>
+
+
+</form>
+
+{% endblock%}
+
